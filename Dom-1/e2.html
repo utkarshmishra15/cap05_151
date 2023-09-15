@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+        <h1>Asynchronous Programming</h1>
+        <div id="product-container"></div>
+    </div>
+    <script>
+        let productContainer = document.getElementById("product-container")
+
+        function displayData(data) {
+            data.forEach(function (prod) {
+                let productCard = document.createElement("div")
+
+                let titleElement = document.createElement("p")
+                titleElement.textContent = "Title : " + prod.name
+
+                let idElement = document.createElement("p")
+                idElement.textContent = "ID : " + prod.id
+
+                productCard.append(titleElement, idElement)
+                productContainer.append(productCard)
+            })
+        }
+
+        function fetchDataFromServerAsync() {
+            productContainer.innerHTML = ""
+            console.log(`fetching data from server asynchronously...`)
+
+            setTimeout(function () {
+                console.log(`data fetched and now DOM is being updated`)
+                const data = [
+                    { id: 1, name: "cinthol soap" },
+                    { id: 2, name: "deo" },
+                ]
+                displayData(data)
+            }, 2000)
+        }
+
+        console.log("start of code..")
+        fetchDataFromServerAsync()
+        console.log("remaining code")
+        console.log("end of code")
+    </script>
+</body>
+
+</html>

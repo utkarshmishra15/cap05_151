@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <input type="number" id="inp1">
+    <input type="number" name="" id="inp2">
+    <button onclick="b1()">ADD</button>
+    <button onclick="b2()">Subtract</button>
+    <button onclick="b3()">Divide</button>
+    <button onclick="b4()">Multiply</button>
+</body>
+<script>
+     let a = document.getElementById("inp1"); 
+     let b = document.getElementById("inp2");
+    function b1(){
+        let n1=a.value;
+        let n2= b.value;
+        let res = +n1 + +n2
+        alert(res);
+        //getting the value of input field and storing it in variable 'a'
+    }
+    function b2(){
+        let n1=a.value;
+        let n2= b.value;
+        let res = +n1 - +n2
+        alert(res);
+        //getting the value of input field and storing it in variable 'a'
+    }
+    function b3(){
+        let n1=a.value;
+        let n2= b.value;
+        let res = +n1 / +n2
+        alert(res);
+        //getting the value of input field and storing it in variable 'a'
+    }
+    function b4(){
+        let n1=a.value;
+        let n2= b.value;
+        let res = +n1 * +n2
+        alert(res);
+        //getting the value of input field and storing it in variable 'a'
+    }
+</script>
+</html>

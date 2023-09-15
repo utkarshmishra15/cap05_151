@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <input type="text" id="inp">
+    <button onclick="Click()">Button</button>
+    <input type="number" id="inp1">
+    <input type="date" id="inp2">
+    <select  id="Gender">
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+    <button onclick="Click1()">Button1</button>
+</body>
+</html>
+<script>
+    let inputTag= document.getElementById("inp")
+ function Click(){
+    // console.log(inputTag.value)
+    alert(inputTag.value)
+ }
+ let inputTag1= document.getElementById("inp1");
+ let inputTag2=document.getElementById("inp2");
+ let gender = document.getElementById("Gender")
+ function Click1(){
+         alert(gender.value)
+ }
+</script>
